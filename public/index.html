@@ -3,7 +3,7 @@
     <head>
     <meta charset="utf-8"></meta>
 
-    <link rel="stylesheet" type="text/css" href="cs/custom.css">
+    <link rel="stylesheet" type="text/css" href="css/custom.css">
 
     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.js"></script>
@@ -27,7 +27,7 @@
           <ul ng-show="artist.selected">
             <li ng-repeat="album in album_data">
 
-            <button class="Album" ng-click="getTracks(album.id); album.selected=!album.selected">
+            <button class="album" style="background-image: {{album.pic}}" ng-click="getTracks(album.id); album.selected=!album.selected">
               <h4>{{album.name}}</h4>
             </button>
 

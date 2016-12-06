@@ -31,7 +31,7 @@
         		for(i in response.data.artists.items){
         			artistName=response.data.artists.items[i].name;
 					artistId=response.data.artists.items[i].id;
-					//artistPic=response.data.artists.items[i].images[1];
+					artistPic=response.data.artists.items[i].images[1];
 					selected=false;
 
 					//create array of objects
@@ -67,7 +67,7 @@
 						//create array of objects
 						album_data[i]={"name":albumName,
 									"id":albumId,
-									//"Pic":albumPic,
+									"pic":albumPic,
 									"selected":false,	
 									}
         			}
