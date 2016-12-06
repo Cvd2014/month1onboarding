@@ -1,0 +1,19 @@
+ul{
+	list-style-type: none;
+}
+
+.artist{
+	width: 500px;
+	height: 250px;
+	color: red;
+	background-color: white;
+}
+
+.album{
+	width: 250px;
+	height: 125px;
+	color: blue;
+	background-color: white;
+}
+
+

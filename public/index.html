@@ -1,0 +1,48 @@
+<!doctype html>
+  <html ng-app="myApp">
+    <head>
+    <meta charset="utf-8"></meta>
+
+    <link rel="stylesheet" type="text/css" href="cs/custom.css">
+
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.js"></script>
+    <script src="js/app.js"></script>
+    <title>Spotify Search</title>
+    </head>
+    
+
+    <body ng-controller="MusicController as music">
+    
+      <form ng-submit="music.submit()">
+        <input type="text" ng-model="music.artists" placeholder="Enter your artist search here!!">
+        <input type="submit" value="Submit">
+      </form>
+
+
+      <ul>
+        <li  ng-repeat="artist in artist_data">
+          <button class= "artist" ng-click="getAlbum(artist.id); artist.selected=!artist.selected" id="{{artist.id}}"> <h2>{{artist.name}}</h2></button>
+          
+          <ul ng-show="artist.selected">
+            <li ng-repeat="album in album_data">
+
+            <button class="Album" ng-click="getTracks(album.id); album.selected=!album.selected">
+              <h4>{{album.name}}</h4>
+            </button>
+
+            <ul ng-show="album.selected">
+              <li ng-repeat="track in track_data">
+                <h5> {{track.name}}: {{track.lenght}}</h5>
+              </li>
+              
+            </ul>
+            </li>
+          </ul>
+        </li>  
+      <ul>
+
+    
+    </body>
+  </html>
+
